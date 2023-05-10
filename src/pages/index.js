@@ -41,7 +41,7 @@ export default function Home() {
     console.log("submit")
 
     try {
-      const response = await fetch("http://localhost:3000/api/token", {
+      const response = await fetch("/api/token", {
         method: "POST",
         headers: {
           "Accept": "application/json",
