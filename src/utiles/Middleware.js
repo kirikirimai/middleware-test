@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 
 const SECRET_KEY = "secret_key"
 
-const authMiddleware = (handler) => {
+const Middleware = (handler) => {
 
   //トークンを調べる
   return async (req, res) => {
@@ -28,4 +28,4 @@ const authMiddleware = (handler) => {
   }
 }
 
-export default authMiddleware
+export default Middleware
