@@ -55,7 +55,7 @@ export default function Home() {
 
       const jsonData = await response.json()
       alert(jsonData.message)
-      if (jsonData.name) {
+      if (jsonData.error) {
         localStorage.removeItem("token")
         setToken("")
       } else {
