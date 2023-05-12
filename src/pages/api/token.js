@@ -1,5 +1,5 @@
 import React from "react";
-import authMiddleware from "@/utiles/authMiddleware";
+import Middleware from "@/utiles/Middleware";
 const token = (req, res) => {
   
     try {
@@ -9,4 +9,4 @@ const token = (req, res) => {
     }
 };
 
-export default authMiddleware(token);
+export default Middleware(token);

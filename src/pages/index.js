@@ -46,7 +46,7 @@ export default function Home() {
         headers: {
           "Accept": "application/json",
           "Content-Type": "application/json",
-          "authorization": "Bearer " + token,
+           "authorization": `Bearer ${localStorage.getItem("token")}`
         },
         body: JSON.stringify({
           name: name
@@ -55,7 +55,7 @@ export default function Home() {
 
       const jsonData = await response.json()
       alert(jsonData.message)
-      if (jsonData.error) {
+      if (jsonData.name) {
         localStorage.removeItem("token")
         setToken("")
       } else {

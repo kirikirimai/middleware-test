@@ -21,7 +21,7 @@ const Middleware = (handler) => {
 
     } catch (error) {
 
-      return res.status(401).json({ message: "トークンの期限が切れている",error:true })
+      return res.status(401).json({ message: "トークンの期限が切れている"})
 
     }
 
